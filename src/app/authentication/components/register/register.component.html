@@ -1,0 +1,56 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <h1 class="text-center"> Register </h1>
+
+    <div class="form-group my-3">
+
+        <label for="InputUsername">Username</label>
+        <input type="text" formControlName="username"  class="form-control" id="InputUsername" aria-describedby="username" placeholder="Username">
+
+        <div *ngIf="submitted && validate['username'].errors" class="text-danger">
+            <div *ngIf="validate['username'].errors['required']">Username is required</div>
+            <div *ngIf="validate['username'].errors['maxlength']">Username maximum length is 50 characters</div>
+        </div>
+
+    </div>
+
+    <div class="form-group my-3">
+
+        <label for="InputEmail">Email address</label>
+        <input type="email" formControlName="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Email">
+
+        <div *ngIf="submitted && validate['email'].errors" class="text-danger">
+            <div *ngIf="validate['email'].errors['required']">Email is required</div>
+            <div *ngIf="validate['email'].errors['email']">Invalid email format</div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="InputPassword">Password</label>
+        <input type="password" formControlName="password" class="form-control" id="InputPassword" placeholder="Password">
+
+        <div *ngIf="submitted && validate['password'].errors" class="text-danger">
+            <div *ngIf="submitted && this.registerForm.get('confirmPassword')!.value!=this.registerForm.get('password')!.value" class="text-danger">
+                <div>Password doesn't match</div>
+            </div>
+            <div *ngIf="validate['password'].errors['required']">Password is required</div>
+            <div *ngIf="validate['password'].errors['minlength']">Password must be at least 3 characters</div>
+        </div>
+
+    </div>     
+
+    <div class="form-group">
+
+        <label for="InputConfirmPassword">Confirm Password</label>
+        <input type="password" formControlName="confirmPassword" class="form-control" id="InputConfirmPassword" placeholder="Confirm password">
+
+        <div *ngIf="submitted && this.registerForm.get('confirmPassword')!.value!=this.registerForm.get('password')!.value" class="text-danger">
+            <div>Password doesn't match</div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary w-100 mt-4 text-center">Submit</button>
+    </div>
+  </form>

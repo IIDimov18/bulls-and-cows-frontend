@@ -1,0 +1,13 @@
+@import "../app.component.colors.sass";
+.gradient{
+    background: rgb(12,74,96);
+background: linear-gradient(120deg, rgba(12,74,96,1) 0%, rgba(171,223,241,1) 100%);
+}
+.main{
+    height: 90vh;
+}
+.game, .explanation{
+    background-color: white;
+    border-radius: 12px;
+    padding: 45px;
+}

@@ -1,0 +1,94 @@
+<div class="container-fluid gradient">
+    <div class="row main justify-content-center">
+        <div class="col-md-3 col-lg-5 text-center m-4 explanation">
+            <h2>BULLS AND COWS</h2>
+
+            <h4>How to play</h4>
+            <p>You have to find the four digit number. Each try you are given a clue how close you are, the clues are
+                in the form of bulls and cows. Each cow means that you found one of the digits and each bull mean that
+                you found the digit and it's position, also bulls are not counted as cows too, what this means is that
+                if you find a digit and it's position you will get a bull, not a bull and a cow.
+            </p>
+
+            <h4>Points</h4>
+            <p>
+                The points are calculated based on the number of guesses and the time it took you to guess the number.
+                Smaller number means better, just like in golf. Points are used so you can see how good you performed
+                and for the leadeboard.
+            </p>
+
+            <h4>Example</h4>
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Number</th>
+                    <th scope="col">Guess</th>
+                    <th scope="col">Cows</th>
+                    <th scope="col">Bulls</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">4927</th>
+                    <td>4276</td>
+                    <td>2(The 2 cows are "2" and "7")</td>
+                    <td>1(The 1 bull is "4")</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4927</th>
+                    <td>9427</td>
+                    <td>2(The 2 cows are "9" and "4")</td>
+                    <td>2(The 2 bulls are "2" and "7")</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4927</th>
+                    <td>4927</td>
+                    <td colspan="2">CONGRATULATIONS YOU WON</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="col-md-6 col-lg-5 text-center m-4 game">
+            <div class="row justify-content-center">
+                <!-- <div class="col-6">
+                    <span class="display-1">?</span>
+                    <span class="display-1 mx-5">?</span>
+                    <span class="display-1 ">?</span>
+                    <span class="display-1 mx-5">?</span>
+                </div> -->
+                <div class="col-1 p-0">
+                    <span class="display-1">?</span>
+                </div>
+                <div class="col-1 mx-5 p-0">
+                    <span class="display-1 ">?</span>
+                </div>
+                <div class="col-1 p-0">
+                    <span class="display-1">?</span>
+                </div>
+                <div class="col-1 mx-5 p-0">
+                    <span class="display-1">?</span>
+                </div>
+            </div>
+            <form class="mt-5" (ngSubmit)="onSubmit()" [formGroup]="gameForm" (ngSubmit)="onSubmit()" >
+
+                <div class="row justify-content-center text-center form-row">
+                    <div class="col-1 ">
+                        <input type="number" class="form-control" formControlName="numberOne" (input)="inputChange($event)">
+                    </div>
+                    <div class="col-1 mx-5">
+                        <input type="number" class="form-control" formControlName="numberTwo" (input)="inputChange($event)">
+                    </div>
+                    <div class="col-1 ">
+                        <input type="number" class="form-control" formControlName="numberThree" (input)="inputChange($event)">
+                    </div>
+                    <div class="col-1 mx-5">
+                        <input type="number" class="form-control" formControlName="numberFour" (input)="inputChange($event)">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary w-100 mt-4 text-center">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
