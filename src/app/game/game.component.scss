@@ -11,3 +11,17 @@ background: linear-gradient(120deg, rgba(12,74,96,1) 0%, rgba(171,223,241,1) 100
     border-radius: 12px;
     padding: 45px;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.guesses{
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 40vh;
+}
+.guess{
+    text-align: center;
+    font-size: 35px
+}

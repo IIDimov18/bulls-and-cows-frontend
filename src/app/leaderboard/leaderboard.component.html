@@ -1,0 +1,11 @@
+<div class="container-fluid gradient">
+    <div class="row  justify-content-center">
+        <div class="col-6 my-5 text-center leaderboard">
+            <h1>TOP 10 SCORES</h1>
+            <h5>(remember the fewer points the better)</h5>
+            <ng-template ngFor let-item [ngForOf]="leaderboard" let-i="index" class="my-1">
+                <h3>{{leaderboard[i].username}}: {{leaderboard[i].points}}</h3>
+            </ng-template>
+        </div>
+    </div>
+</div>

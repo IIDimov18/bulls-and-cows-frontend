@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { MainComponent } from './main/main.component';
 import { GameComponent } from './game/game.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent},
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'login', component: AuthenticationComponent },
   { path: 'succesful-registration', component: AuthenticationComponent},
   { path: 'game' , component: GameComponent},
+  { path: 'leaderboard', component: LeaderboardComponent},
 
   { path: '**', redirectTo: '' }
 ];

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
@@ -13,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SuccesfulRegisterComponent } from './authentication/components/succesful-register/succesful-register.component';
 import { GameComponent } from './game/game.component';
 import { MainComponent } from './main/main.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 
 
@@ -25,7 +27,8 @@ import { MainComponent } from './main/main.component';
     LoginComponent,
     SuccesfulRegisterComponent,
     GameComponent,
-    MainComponent
+    MainComponent,
+    LeaderboardComponent
 
   ],
   imports: [
