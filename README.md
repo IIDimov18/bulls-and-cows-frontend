@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 
+To run it you will need to install the packages with `npm install` and run it with `ng serve`, also if there is no [Angular CLI] on the machine or an older version then the required you will need to update or install [Angular CLI]
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
